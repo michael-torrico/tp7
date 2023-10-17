@@ -3,7 +3,7 @@
 #include <conio.h>
 int main( ) {	
 	int i,j,k;
-	float acu1=0,acu2=0,acu3=0,acut=0,nz[3][12]={{0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0}},re,reco[12]={0,0,0,0,0,0,0,0,0,0,0,0};
+	float acu1=0,acu2=0,acu3=0,acut=0,nz[3][12]={0},re,reco[12]={0};//nz[3][12]={{0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0}},reco[12]={0,0,0,0,0,0,0,0,0,0,0,0}
 	while(j>00){
 		printf("ingrese el num del bondi: ");
 		scanf("%d",&j);
@@ -13,7 +13,7 @@ int main( ) {
 		
 		printf("ingresa la recaudacion: ");
 		scanf("%f",&re);
-		nz[i-1][j-1]=re;
+		nz[i-1][j-1]=re;//No se guarda el total recaudado por coche...
 		acut=acut+re;
 		if(i-1==0){acu1=re+acu1;}
 		if(i-1==1){acu2=re+acu2;}
